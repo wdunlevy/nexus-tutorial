@@ -1,0 +1,42 @@
+{
+  "name": "nexus-tutorial",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "ts-node-dev --transpile-only --no-notify api/index.ts",
+    "build": "tsc",
+    "generate": "ts-node --transpile-only api/schema",
+    "test": "npm run generate && jest"
+  },
+  "jest": {
+    "preset": "ts-jest",
+    "globals": {
+      "ts-jest": {
+        "diagnostics": {
+          "warnOnly": true
+        }
+      }
+    },
+    "testEnvironment": "node"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@prisma/client": "^3.0.2",
+    "apollo-server": "^3.3.0",
+    "graphql": "^15.5.3",
+    "nexus": "^1.1.0"
+  },
+  "devDependencies": {
+    "@types/jest": "^27.0.1",
+    "get-port": "^5.1.1",
+    "graphql-request": "^3.5.0",
+    "jest": "^27.1.1",
+    "prisma": "^3.0.2",
+    "ts-jest": "^27.0.5",
+    "ts-node-dev": "^1.1.8",
+    "typescript": "^4.4.2"
+  }
+}
